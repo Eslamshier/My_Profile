@@ -1,0 +1,154 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+.header_container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.header_container h1 {
+    text-align: center;
+        color: rgba(255, 255, 255, 0.4);
+        background: -webkit-gradient(linear, left top, right top, from(#2c2c6c), to(#2c2c6c), color-stop(0.4, #4db5ff));
+        background: -moz-gradient(linear, left top, right top, from(#2c2c6c), to(#2c2c6c), color-stop(0.4, #4db5ff));
+        background: gradient(linear, left top, right top, from(#2c2c6c), to(#2c2c6c), color-stop(0.4, #4db5ff));
+        -webkit-background-size: 125px 100%;
+        -moz-background-size: 125px 100%;
+        background-size: 125px 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-animation-name: shimmer;
+        -moz-animation-name: shimmer;
+        animation-name: shimmer;
+        -webkit-animation-duration: 3s;
+        -moz-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-color: #fff;
+}
+/* animation */
+@-moz-keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@-webkit-keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@-o-keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+.text-light {
+    font-size: 15px;
+}
+/* cta */
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* header socials media */
+.header_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+.header_socials::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+/* .header_socials::before {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+} */
+
+/* ME */
+.me {
+    background: linear-gradient(var(--color-primary),transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    /* padding: 5rem 1.5rem 1.5rem 1.5rem; */
+    overflow: hidden;
+}
+/* .me img {
+    background: center;
+    background-size: 50px;
+} */
+
+/* scroll down */
+.scroll_down {
+    position: absolute;
+    right: 2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+
+/* media medium devices */
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 68vh;
+    }
+}
+
+/* media small devices */
+@media screen and (max-width: 600px) {
+    .header {
+        height: 100vh;
+    }
+    .header_socials,.scroll_down {
+        display: none;
+    }
+}
